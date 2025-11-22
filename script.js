@@ -4,7 +4,7 @@ var player2Score = 0;
 var player1Area = document.getElementById('player1');
 var player2Area = document.getElementById('player2');
 var scoreDifference = document.getElementById('score-difference');
-var winningPlayer = document.getElementById('winning-player');
+var winningArrow = document.getElementById('winning-arrow');
 var settingsIcon = document.getElementById('settings-icon');
 var settingsModal = document.getElementById('settings-modal');
 var player1ColorInput = document.getElementById('player1-color');
@@ -21,14 +21,12 @@ player2Area.addEventListener('click', function () {
 function updateScore() {
     var difference = Math.abs(player1Score - player2Score);
     scoreDifference.innerText = difference.toString();
+    winningArrow.classList.remove('up', 'down');
     if (player1Score > player2Score) {
-        winningPlayer.innerText = 'Player 1 is winning';
+        winningArrow.classList.add('up');
     }
     else if (player2Score > player1Score) {
-        winningPlayer.innerText = 'Player 2 is winning';
-    }
-    else {
-        winningPlayer.innerText = '';
+        winningArrow.classList.add('down');
     }
 }
 settingsIcon.addEventListener('click', function () {

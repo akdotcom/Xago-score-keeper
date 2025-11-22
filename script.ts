@@ -4,7 +4,7 @@ let player2Score = 0;
 const player1Area = document.getElementById('player1')!;
 const player2Area = document.getElementById('player2')!;
 const scoreDifference = document.getElementById('score-difference')!;
-const winningPlayer = document.getElementById('winning-player')!;
+const winningArrow = document.getElementById('winning-arrow')!;
 const settingsIcon = document.getElementById('settings-icon')!;
 const settingsModal = document.getElementById('settings-modal')!;
 const player1ColorInput = document.getElementById('player1-color') as HTMLInputElement;
@@ -25,12 +25,12 @@ function updateScore() {
     const difference = Math.abs(player1Score - player2Score);
     scoreDifference.innerText = difference.toString();
 
+    winningArrow.classList.remove('up', 'down');
+
     if (player1Score > player2Score) {
-        winningPlayer.innerText = 'Player 1 is winning';
+        winningArrow.classList.add('up');
     } else if (player2Score > player1Score) {
-        winningPlayer.innerText = 'Player 2 is winning';
-    } else {
-        winningPlayer.innerText = '';
+        winningArrow.classList.add('down');
     }
 }
 
