@@ -35,8 +35,25 @@ body, html {
     border-radius: 10px;
 }
 
-#winning-player {
-    font-size: 0.5em;
+#winning-arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid white;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: none;
+}
+
+#winning-arrow.up {
+    transform: rotate(0deg);
+    display: block;
+}
+
+#winning-arrow.down {
+    transform: rotate(180deg);
+    display: block;
 }
 
 #settings-icon {
