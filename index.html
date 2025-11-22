@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xago Score Keeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="settings-icon">⚙️</div>
+    <div id="player1" class="player-area"></div>
+    <div id="score-display">
+        <span id="score-difference">0</span>
+        <span id="winning-player"></span>
+    </div>
+    <div id="player2" class="player-area"></div>
+
+    <div id="settings-modal">
+        <div class="modal-content">
+            <h2>Customize Colors</h2>
+            <label for="player1-color">Player 1 Color:</label>
+            <input type="color" id="player1-color" value="#0000ff">
+            <br>
+            <label for="player2-color">Player 2 Color:</label>
+            <input type="color" id="player2-color" value="#008000">
+            <br>
+            <button id="save-colors">Save</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

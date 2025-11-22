@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akdotcom/Xago-score-keeper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/akdotcom/Xago-score-keeper/issues"
+  },
+  "homepage": "https://github.com/akdotcom/Xago-score-keeper#readme",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
