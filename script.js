@@ -21,12 +21,15 @@ player2Area.addEventListener('click', function () {
 function updateScore() {
     var difference = Math.abs(player1Score - player2Score);
     scoreDifference.innerText = difference.toString();
+    scoreDifference.style.color = 'black';
     winningArrow.classList.remove('up', 'down');
     if (player1Score > player2Score) {
         winningArrow.classList.add('up');
+        scoreDifference.style.color = player1ColorInput.value;
     }
     else if (player2Score > player1Score) {
         winningArrow.classList.add('down');
+        scoreDifference.style.color = player2ColorInput.value;
     }
 }
 settingsIcon.addEventListener('click', function () {
